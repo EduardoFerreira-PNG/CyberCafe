@@ -13,13 +13,24 @@ $color-background: #4b4b55;
 // fim das variaveis
 
 body {
-  background-color: $color-background;
+    background-color:hsla(240,6%,31%,1);
+    background-image:
+    radial-gradient(at 2% 1%, hsla(256,56%,54%,1) 0px, transparent 30%),
+    radial-gradient(at 100% 100%, hsla(256,56%,54%,1) 0px, transparent 30%);
 }
 
 main {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
+  height: 100vh;
+
+  .img__login{
+    width: 350px;
+    margin-bottom: 2.2em;
+    
+  }
 
   .container {
     display: flex;
@@ -27,9 +38,7 @@ main {
     align-items: center;
     width: 400px;
     height: 350px;
-    background-color: #fff;
     border-radius: 10px;
-    box-shadow: 0px 4px 4px #EEBA01;
 
     form {
       display: flex;
@@ -43,6 +52,7 @@ main {
           label{
             font-size: 15px;
             margin-bottom: 0.5em;
+            color: $branco;
     
           }
     
@@ -51,13 +61,13 @@ main {
             padding: 1em;
             border-radius: 10px;
             border: none;
-            background-color: $color-background;
+            background-color: $branco;
             outline: none;
             box-shadow: 0px 4px 4px #EEBA01;
           }
     
           input::placeholder{
-            color: #fff;
+            color: $color-background;
           }
       }
 
@@ -66,28 +76,38 @@ main {
         justify-content: center;
         
           .btn__login{
-            color: $branco;
-            background-color: $color-background;
+              height: 40px;
+              width: 150px;
+            color: $color-background;
+            background-color: $branco;
+            font-weight: bold;
             margin-bottom: 2.5em;
             padding: 1em;
             border-radius: 10px;
-            box-shadow: 0px 4px 4px #EEBA01;
+            box-shadow: 0px 0px 10px #EEBA01;
             border: none;
-            height: 40px;
-            width: 150px;
           }
     
           .btn__login:hover{
             transition: 0.3s;
             cursor: pointer;
-            background-color: $branco;
-            border: 1px solid $color-background;
-            font-weight: bold;
-            color: #4b4b55;
-            box-shadow: 0px 0px 4px #8000FF;
+            color: $branco;
+            background-color: $color-background;
+            border: 1px solid $branco;
+            box-shadow: 0px 0px 10px #8000FF;
           }
-      }
-
+        }
+        
+        
     }
-  }
+}
+    p{
+    margin: 1em 0;
+    color: $branco;
+    font-weight: bold;
+    span{
+        color: #EEBA01;
+    }
+    }
+
 }

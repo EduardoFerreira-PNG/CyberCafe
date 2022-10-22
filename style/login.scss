@@ -1,0 +1,93 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+
+// variaveis
+$branco: #fff;
+$color-background: #4b4b55;
+
+// fim das variaveis
+
+body {
+  background-color: $color-background;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 400px;
+    height: 350px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 4px 4px #EEBA01;
+
+    form {
+      display: flex;
+      flex-direction: column;
+      min-width: 80%;
+      
+      .input__user{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+          label{
+            font-size: 15px;
+            margin-bottom: 0.5em;
+    
+          }
+    
+          input{
+            margin-bottom: 2.5em;
+            padding: 1em;
+            border-radius: 10px;
+            border: none;
+            background-color: $color-background;
+            outline: none;
+            box-shadow: 0px 4px 4px #EEBA01;
+          }
+    
+          input::placeholder{
+            color: #fff;
+          }
+      }
+
+      .btn{
+        display: flex;
+        justify-content: center;
+        
+          .btn__login{
+            color: $branco;
+            background-color: $color-background;
+            margin-bottom: 2.5em;
+            padding: 1em;
+            border-radius: 10px;
+            box-shadow: 0px 4px 4px #EEBA01;
+            border: none;
+            height: 40px;
+            width: 150px;
+          }
+    
+          .btn__login:hover{
+            transition: 0.3s;
+            cursor: pointer;
+            background-color: $branco;
+            border: 1px solid $color-background;
+            font-weight: bold;
+            color: #4b4b55;
+            box-shadow: 0px 0px 4px #8000FF;
+          }
+      }
+
+    }
+  }
+}
